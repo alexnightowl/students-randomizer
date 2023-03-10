@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #1F1F1F;
+}
+
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #1F1F1F, #3D3D3D);
+    padding: 1rem 2rem;
+}
+
+.list-container {
+    flex: 0 0 20%;
+    display: none;
+    flex-direction: column;
+}
+
+.wrapper.show .list-container {
+    display: flex;
+}
+
+label {
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+}
+
+textarea {
+    flex-grow: 1;
+    background-color: #222226;
+    border: 1px solid #000;
+    padding: 0.5rem;
+    color: #aab;
+}
+
+.spinner-container {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.name {
+    font-size: 3rem;
+    border: 1px solid #aaa;
+    padding: 1.5em;
+    width: 50%;
+    text-align: center;
+    background-color: white;
+    color: #1F1F1F;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 0 30px 10px #1bbdd2;
+    margin-bottom: 3rem;
+}
+
+.name:before,
+.name:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.name:after {
+    right: 10px;
+    left: auto;
+    transform: skew(8deg) rotate(3deg);
+}
+
+button {
+    background-image: linear-gradient(to bottom right, #ff0080, #e60073, #d90066, #cc0059, #bf004d);
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 1rem;
+}
+
+button:hover {
+    background-image: linear-gradient(to bottom right, #ff3399, #ff1a75, #ff004d, #e6004d, #cc0059);
+}
+
+a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+@keyframes slidebg {
+    to {
+        background-position: calc(20vw * 2);
+    }
+}
